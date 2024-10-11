@@ -1,20 +1,47 @@
-# Share Market Price Prediction
+Share Market Price Prediction
+Project Overview
+This project aims to predict the closing prices of a company's stock based on historical market data using machine learning techniques. The prediction model uses a Linear Regression algorithm to forecast future prices based on features such as Open, High, Low, and Close prices from historical records.
 
-This project utilizes machine learning to predict share market prices based on historical data.
+Data Source
+The data for this project comes from the CSV file containing historical stock prices for a company, including the following columns:
 
-## Features
+Date: The date of the stock data entry
+Open: The opening price of the stock
+High: The highest price of the stock during the trading day
+Low: The lowest price of the stock during the trading day
+Close: The closing price of the stock
+Adj Close: The adjusted closing price (corrected for splits and dividends)
+Volume: The number of shares traded
+Dependencies
+The project requires the following libraries:
 
-- Data preprocessing
-- Feature engineering
-- Model training (using regression techniques)
-- Prediction visualization
+Pandas: For data manipulation and analysis
+NumPy: For numerical computations
+Scikit-learn: For machine learning model implementation
+train_test_split: For splitting the data into training and testing sets
+LinearRegression: For applying linear regression to the data
+mean_squared_error, mean_absolute_error: For evaluating model performance
+Matplotlib: For basic data visualization
+Plotly: For advanced, interactive visualizations
+Installation
+To install the required libraries, run the following command:
 
-## Requirements
-
-- Python 3
-- Jupyter Notebook
-- pandas
-- numpy
-- scikit-learn
-- matplotlib
-- seaborn
+bash
+Copy code
+pip install pandas numpy scikit-learn matplotlib plotly
+Steps
+Load the Data: The dataset is loaded from a CSV file (3MINDIA.BO.csv), which contains historical stock data.
+Data Exploration:
+Basic information about the dataset is printed using data.info().
+Descriptive statistics are generated using data.describe().
+Data Preprocessing:
+Data is split into training and testing sets using the train_test_split function from Scikit-learn.
+Model Training:
+A linear regression model is trained on the data.
+The model predicts the stock's closing prices based on historical data.
+Model Evaluation:
+The model's performance is evaluated using mean squared error and mean absolute error metrics.
+Visualization:
+Matplotlib and Plotly are used to create visualizations of the stock price trends and the model's predictions.
+Usage
+To run the project, ensure that you have the required dependencies installed and execute the Jupyter Notebook.
